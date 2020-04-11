@@ -6,4 +6,8 @@ This MQL4 script can be used to generate a CSV across different symbols, indicat
 1. Download generate-csv.mq4 and move to your "Scripts" folder
 1. Download utility-functions.mqh and move to your "Include" folder
 
-![Install](/images/install.png)
+![Install](/images/mql-install.png)
+
+1. Run generate-csv script from MT4
+
+![Input](/images/mql-input.png)
