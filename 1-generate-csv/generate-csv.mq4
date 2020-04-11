@@ -32,8 +32,8 @@ input datetime StartDate = NULL;
 // *if StartDate is set above it will override this
 input int NumberBarsBack = 60;
 
-// split files on number of records i.e. 1040000 fits in excel
-input int split = 1040000;
+// Split files on number of records i.e. 1040000 fits in excel
+input int Split = 1040000;
 
 // SettingMin and SettingMax determine the range of test settings
 // minimum and maximum setting to test for ALL indicators
@@ -119,7 +119,7 @@ void OnStart()
                
                // increase row count to split files
                rows++;
-               if(rows % split == 0)
+               if(rows % Split == 0)
                {
                   //set back to 0 so we don't overflow an int
                   rows = 0;
