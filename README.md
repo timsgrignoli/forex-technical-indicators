@@ -4,7 +4,7 @@ This project specifically targets the Forex market but it can be easily reused f
 
 ## About the folders
 1. Generate CSV - MQL to extract information to CSV file(s)
-1. Upload CSV to S3 Bucket - Python to upload the CSV file(s) to S3 bucket
+1. Upload CSV to S3 - Python to upload the CSV file(s) to S3 bucket
 1. Trigger Lambda from S3 - Python to import CSV file(s) from S3 bucket to Redshift (or other SQL database)
 1. Calculate Wins - SQL to calucalte a win based on a specific exit strategy
 1. Evaluate Indicators - SQL to find indicators based on different performance strategies
