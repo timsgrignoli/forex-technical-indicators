@@ -1,5 +1,5 @@
 # Upload CSV to S3
-This python script will upload th CSV files generated in the [first step](/1-generate-csv/)
+The python script **upload-csv-to-s3.py** will upload th CSV files generated in the [first step](/1-generate-csv/)
 
 ## How to Use
 1. Setup user permissions in IAM
