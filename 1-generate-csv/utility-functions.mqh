@@ -212,10 +212,10 @@ int GetIndicatorDirection(int bar, int setting, string symbol, int timeFrame, do
    else if(indicator == "Aroon")
    {
       // up
-      value1 = iCustom(symbol, timeFrame, "aroon_up_down", setting, false, false, 0, bar);
+      value1 = iCustom(symbol, timeFrame, "Aroon_Up_Down", setting, false, false, 0, bar);
       
       // down
-      value2 = iCustom(symbol, timeFrame, "aroon_up_down", setting, false, false, 1, bar);
+      value2 = iCustom(symbol, timeFrame, "Aroon_Up_Down", setting, false, false, 1, bar);
    }
    
    // example of zero cross indicator
