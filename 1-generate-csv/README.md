@@ -19,4 +19,8 @@ This MQL4 script can be used to generate a CSV across different symbols, indicat
 * SettingMin - lowest setting to test for all indicators.  Default = 7 for sample.
 * SettingMax - highest setting to test for all indicators.  Default = 10 for sample.
 
-Generated files will output in the **Files** folder (see picture above for file path) with the following format: IndicatorDump_yyyy-mm-dd_n.csv where n = file number (if multiple files were split).  See [here](/1-generate-csv/sample-file) for a sample file ran on April 13, 2020 with Sample = True.
+Generated files will output in the **Files** folder (see picture above for file path) with the following format:
+
+**IndicatorDump_yyyy-mm-dd_n.csv**
+
+where n = file number (if multiple files were split).  See [here](/1-generate-csv/sample-file) for a sample file ran on April 13, 2020 with Sample = True.
