@@ -10,8 +10,8 @@ LANGUAGE sql
 CREATE OR REPLACE PROCEDURE roi_symbol_indicator_setting(datetime, datetime)
 AS $$
 BEGIN
-	DROP TABLE if exists result_symbol_indicator;
-	create table result_symbol_indicator
+	DROP TABLE if exists symbol_indicator_result;
+	create table symbol_indicator_result
 	(
 		symbol varchar(10),
 		indicator_name varchar(20),
@@ -21,7 +21,7 @@ BEGIN
 		total bigint,
 		roi decimal(19,9)
 	);
-	insert into result_symbol_indicator
+	insert into symbol_indicator_result
 	select r.symbol,
 		r.indicator_name,
 		r.indicator_setting,
