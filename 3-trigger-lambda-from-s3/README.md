@@ -12,12 +12,12 @@ This code and setup will copy the CSV from S3 into your Redshift cluster.  You n
 3. Create a new Lambda function in the same region as your Redshift cluster and S3 bucket.  Under *Choose or create an execution role* choose *Create a new role with basic Lambda permissions* we'll add permissions later.
 4. Download the *src* folder and zip it up (*psycopg2* is necessary to communicate to Redshift using python).  Upload the zip to Lambda in the **Function code** section by changing *Code entry type* to *Upload a .zip file* (see below).  Also, make sure the Handler matches. ![Lambda Setup](/images/lambda-zip-handler.png)
 5. Change values at the top of the **import-csv-from-s3.py**
-* iam_role - role attached to Redshift database
-* db_database - database name
-* db_user - user created above
-* db_password - password for user above
-* db_port - default 5439 or change for custom setup
-* db_host - host of cluster
+* **iam_role** - role attached to Redshift database
+* **db_database** - database name
+* **db_user** - user created above
+* **db_password** - password for user above
+* **db_port** - default 5439 or change for custom setup
+* **db_host** - host of cluster
 
 *For more help on connection string values look [here](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/event-publishing-redshift-cluster-connect.html).*
 
