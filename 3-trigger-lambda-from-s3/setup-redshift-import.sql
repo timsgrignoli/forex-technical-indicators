@@ -117,7 +117,7 @@ BEGIN
 	-- refer to the README for Calculate Wins on Github for detailed explanation https://github.com/timsgrignoli/forex-technical-indicators
 	-- table to loop through to calculate
 	DROP TABLE if exists result_table;
-	create table result_table
+	create temp table result_table
 	(
 		row_num int,
 		symbol varchar(10),
