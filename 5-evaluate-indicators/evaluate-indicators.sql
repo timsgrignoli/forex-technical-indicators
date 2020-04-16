@@ -7,11 +7,11 @@ $$
 LANGUAGE sql
 ;
 
-CREATE OR REPLACE PROCEDURE symbol_indicator_roi_30days()
+CREATE OR REPLACE PROCEDURE roi_symbol_indicator_setting(datetime, datetime)
 AS $$
 BEGIN
-	DROP TABLE if exists symbol_indicator;
-	create table symbol_indicator
+	DROP TABLE if exists result_symbol_indicator;
+	create table result_symbol_indicator
 	(
 		symbol varchar(10),
 		indicator_name varchar(20),
@@ -21,7 +21,7 @@ BEGIN
 		total bigint,
 		roi decimal(19,9)
 	);
-	insert into symbol_indicator
+	insert into result_symbol_indicator
 	select r.symbol,
 		r.indicator_name,
 		r.indicator_setting,
@@ -30,7 +30,8 @@ BEGIN
 		count(r.win_1_atr) as total,
 		f_calculate_roi(sum(r.win_1_atr), sum(r.win_2_atr), count(r.win_1_atr)) roi
 	from indicator_result r
-	where r.candle_date >= dateadd(day, -30, cast(getdate() as date))
+	where r.candle_date >= $1
+		and r.candle_date <= $2
 		and r.indicator_signal = 1
 	group by r.symbol,
 		r.indicator_name,
