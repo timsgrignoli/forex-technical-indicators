@@ -21,5 +21,5 @@ This code and setup will copy the CSV from S3 into your Redshift cluster.  You n
 
 *For more help on connection string values look [here](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/event-publishing-redshift-cluster-connect.html).*
 
-6. Edit **Basic Setting** change *Timeout* to at least 3 minutes (this may need to be adjusted based on the size of your loads).  At the very bottom click *View the nameOfYourFunction-role-kjkscd role* to bring up in IAM console.  Attach Policy *AWSLambdaExecute* which allows the function access to logs and S3 for the event triggered.  Then create a policy to allow to connect to Redshift see *custom-lambda-redshift-policy.json* in the *policies* folder.
+6. Edit **Basic Setting** change *Timeout* to at least 3 minutes (this may need to be adjusted based on the size of your loads).  At the very bottom click *View the nameOfYourFunction-role-kjkscd role* to bring up in IAM console.  Attach Policy *AWSLambdaExecute* which allows the function access to logs and S3 for the event triggered.  Then create a policy to allow to connect to Redshift see *custom-lambda-policy.json* in the *policies* folder.
 7. Click **Add trigger**.  Select S3, select the **Bucket**, choose *All object create events* for **Event type**, enter **Prefix** or **Suffix** (if applicable).
