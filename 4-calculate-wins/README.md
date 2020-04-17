@@ -1,7 +1,7 @@
 # Calculate Wins
 An indicator will tell which direction to trade; next we need to find when to exit.
 
-This script calculates whether a given symbol, indicator_name, indicator_setting (indicating an indicator_direction) will win_1_atr, win_2_atr and when the trade will finish by a finish_date.
+This script calculates whether a given symbol, indicator_name, indicator_setting (indicating an indicator_direction) will win_1_atr, win_2_atr and when the trade will finish by a finish_date.  Run it in your Redshift cluster.
 
 It uses the Average True Range ([ATR](https://www.investopedia.com/terms/a/atr.asp)) indicator to determine where to place stop losses and take profit points for your trades.  The period used is 14.
 
