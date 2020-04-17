@@ -8,9 +8,8 @@ This project specifically targets the Forex market but it can be easily reused f
 1. Trigger Lambda from S3 - Python to import CSV file(s) from S3 bucket to Redshift (or other SQL database)
 1. Calculate Wins - SQL to calucalte a win based on a specific exit strategy
 1. Evaluate Indicators - SQL to find indicators based on different performance strategies
-1. Reporting and Simulation - how I got the data to Tableau Public from Redshift (there are limits)
 
-There are additional README.md files in the corresponding folders for more specific information.
+There are additional README.md files in the corresponding folders for more specific information.  Also, see some reporting using this data pipeline [here](https://s3-us-west-1.amazonaws.com/forex.timsgrignoli.com/index.html#reports).
 
 ## Additional Ideas
 There are a lots of forks that can be made in this project or even just changes to parameters that can give great data.  I keep some ideas here:
