@@ -1,7 +1,13 @@
 # Calculate Wins
-An indicator will tell which direction to trade; next we need to find when to exit.  This script calculates whether a given symbol, indicator_name, indicator_setting (indicating an indicator_direction) will win_1_atr, win_2_atr and when the trade will finish by a finish_date.
+An indicator will tell which direction to trade; next we need to find when to exit.
+
+This script calculates whether a given symbol, indicator_name, indicator_setting (indicating an indicator_direction) will win_1_atr, win_2_atr and when the trade will finish by a finish_date.
+
 It uses the Average True Range ([ATR](https://www.investopedia.com/terms/a/atr.asp)) indicator to determine where to place stop losses and take profit points for your trades.  The period used is 14.
-It should be run after data is imported from *indicator_staging* to *indicator_result*.  It is included as part of the Lambda function to be used after an incremental import.  It can easily be moved and scheduled anytime after new rows are in *indicator_result*.  If you have many rows to process or lots of new files generated (like first time import), it would be best to run this seperate from the Lambda function to avoid any timeout.
+
+It should be run after data is imported from *indicator_staging* to *indicator_result*.  It is included as part of the Lambda function to be used after an incremental import.  It can easily be moved and scheduled anytime after new rows are in *indicator_result*.
+
+*If you have many rows to process or lots of new files generated (like first time import), it would be best to run this seperate from the Lambda function to avoid any timeout.
 
 ## Exit Strategy
 1. Assuming a trade is taken by an indicator and setting for a symbol right before a candle closes (assuming you enter at the close price the day a signal is given), this logic will assume 2 trades will be placed (the amount of the trade will be discussed in the next step) a [stop loss](https://www.investopedia.com/terms/s/stop-lossorder.asp) is placed at 1.5 * ATR for both initially.  The [take profit](https://www.investopedia.com/terms/t/take-profitorder.asp) of the first trade will be 1 * ATR and the take profit of the second trade will be 2 * ATR.
