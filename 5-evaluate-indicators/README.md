@@ -7,7 +7,10 @@ This SQL shows how the indicators were evaluated using the assumed exit strategy
 * **roi_strategy_simulation(start_eval, end_eval, start_sim, end_sim)** - stored procedure used for some reports simulating if you chose indicators using a specific strategy.  It evaluates the indicators from *start_eval* to *end_eval*, chooses the "best" based on a strategy (see below), then simulates what would've happened if you traded that strategy from *start_sim* to *end_sim*.
 
 ### Strategies
-All these strategies are ran with a particular *start_eval, end_eval, start_sim* and *end_sim* date based on re-usable logic that can be used to decide what indicators to choose for your trading.  These are only a couple examples on how to start the data but the filters, combinations, and time ranges are unlimited!  Please note, as with all market [backtesting](https://www.investopedia.com/terms/b/backtesting.asp), past performance does not implicate future results.
+All these strategies are ran with a particular *start_eval, end_eval, start_sim* and *end_sim* date based on re-usable logic that can be used to decide what indicators to choose for your trading.  These are only a couple examples on how to start evaluating but the filters, combinations, and time ranges are unlimited!
+
+Please note, as with all market [backtesting](https://www.investopedia.com/terms/b/backtesting.asp), past performance does not implicate future results.
+
 * **Simple ROI Low Setting** - this picks the indicator for each symbol based on the best ROI from the *start_eval* to *end_eval* period, splitting ties of ROI by the lowest setting of the indicator.  The thought is the best performing indicators over a month or year evaluation period might perform well over a *start_sim* to *end_sim* simulation period and lower settings may give a faster signal on indicators over a high setting that may miss trends.
 * **Simple ROI High Setting** - same as above except higher settings may give a signal on indicators that has less noise and less false signals than a low setting.
 * **No Lose Streak Average Win1 > 80% High Setting"** - this shows how to use some filter logic to create a strategy.  It assumes the longest lose streak = 0 and the average win percentage of win_1_atr is greater than 80% sorting ties by setting high (see above).
