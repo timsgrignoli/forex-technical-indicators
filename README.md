@@ -1,6 +1,6 @@
 # forex-technical-indicators
 Create a data flow analyzing technical entry indicators using MQL and your favorite broker on MetaTrader.  Each folder is a consecutive step in the data flow pipeline.  Check out the overview website [here](https://s3-us-west-1.amazonaws.com/forex.timsgrignoli.com/index.html).
-This project specifically targets the Forex market but it can be easily reused for any market and most indicators compatible with MQL.  I recommend (and have included) "Zero-Cross" and "Two Lines Cross" indicators.  For more information on these types of indicators check out [this site](https://nononsenseforex.com/indicators/forex-trend-indicators/) (I am not affiliated with this site but have used it for technical strategies).
+This project specifically targets the Forex market but it can be easily reused for any market and most indicators compatible with MQL.  This project uses Moving Averages as an entry using a price crossover method.  Learn more [here](https://www.investopedia.com/articles/active-trading/052014/how-use-moving-average-buy-stocks.asp), but essentially when price closes above MA, go long and when it closes below, go short.  There are also an example of a "Zero-Cross" and "Two Lines Cross" indicators included.  For more information on these types of indicators look [here](https://nononsenseforex.com/indicators/forex-trend-indicators/) (I am not affiliated with this site but have used it for technical strategies).
 
 ## About the folders
 1. Generate CSV - MQL to extract information to CSV file(s)
