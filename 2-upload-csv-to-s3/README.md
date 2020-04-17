@@ -12,5 +12,5 @@ The python script **upload-csv-to-s3.py** will upload th CSV files generated in 
 
 ### Input Parameters
 * Directory - The source dircetory where the CSV files are stored
-* Bucket - The name of the bucket (BucketName) and optionally a folder inside a bucket (SubDirectory)
+* Bucket - The name of the bucket (BucketName) and optionally a folder inside a bucket (Prefix)
 * FileType - Default to .csv because those are the file types generated from the first step.  It does not support expressions (i.e. Indicator*.csv).  It must match the file extension exactly (ends with).
