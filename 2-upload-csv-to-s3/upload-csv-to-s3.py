@@ -8,11 +8,11 @@ import sys
 # Directory = "/home/user/files/"
 Directory = ""
 
-# s3 destination bucket, can support an optional SubDirectory inside a bucket
+# s3 destination bucket, can support an optional Prefix inside a bucket
 # include trailing slash
 # example(s):
 # Bucket = "BucketName/"
-# Bucket = "BucketName/SubDirectory/"
+# Bucket = "BucketName/Prefix/"
 Bucket = ""
 
 # check parameters set
