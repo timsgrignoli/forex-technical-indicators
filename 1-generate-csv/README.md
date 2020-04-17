@@ -13,6 +13,7 @@ This MQL4 script can be used to generate a CSV across different symbols, indicat
 * Sample - True will run a *sample* of indicators and *sample* of symbols to check it works.  False will run the *full* set of indicators and *full* set of currencies (all 28 major pairs).
   * In order to run the *full* set, download the [Aroon_Up_Down](https://www.earnforex.com/metatrader-indicators/Aroon-Up-Down/) indicator and the [CMF_v1](https://forex-indicators.net/volume/chaikin-money-flow) indicators and put them in **Indicators** folder (see picture above for file path).
   * The sample set and full set can be found at the top of the **utility-functions.mqh** file.
+  * The moving average indicators used MQL4's [iMA](https://docs.mql4.com/indicators/ima) function and all the [smoothing methods](https://docs.mql4.com/constants/indicatorconstants/enum_ma_method) (SMA, EMA, SMMA, and LWMA) with the indicator_setting referring to the period parameter.
 * StartDate - (optional) use this to select a begin date.  This will override *NumberBarsBack* below.
 * NumberBarsBack - use instead of *StartDate* to select a number of bars.  Default = 60 for sample.
 * Split - use as number of records before splitting to a new file.  Default = 1040000 which fits in Excel.
