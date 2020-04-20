@@ -58,19 +58,19 @@ void WriteData(string data, int file)
 // write header for detail file
 void WriteDetailHeader(int detailFile)
 {
-   WriteData("Symbol,", detailFile);
-   WriteData("Date,", detailFile);
-   WriteData("Open,", detailFile);
-   WriteData("High,", detailFile);
-   WriteData("Low,", detailFile);
-   WriteData("Close,", detailFile);
-   WriteData("Direction,", detailFile);
-   WriteData("Atr,", detailFile);
+   WriteData("symbol,", detailFile);
+   WriteData("candle_date,", detailFile);
+   WriteData("open_price,", detailFile);
+   WriteData("high_price,", detailFile);
+   WriteData("low_price,", detailFile);
+   WriteData("close_price,", detailFile);
+   WriteData("candle_direction,", detailFile);
+   WriteData("atr,", detailFile);
    
-   WriteData("IndicatorName,", detailFile);
-   WriteData("IndicatorSetting,", detailFile);
-   WriteData("IndicatorDirection,", detailFile);
-   WriteData("IndicatorSignal,", detailFile);
+   WriteData("indicator_name,", detailFile);
+   WriteData("indicator_setting,", detailFile);
+   WriteData("indicator_direction,", detailFile);
+   WriteData("indicator_signal,", detailFile);
    WriteData("\n", detailFile);
    
    return;
