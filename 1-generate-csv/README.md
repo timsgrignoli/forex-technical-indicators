@@ -1,5 +1,5 @@
 # Generate CSV
-This MQL4 script can be used to generate a CSV across different symbols, indicators, and indicator settings over a period of time of for a particular timeframe.
+This MQL4 script can be used to generate a CSV across different symbols, indicators, and indicator settings over a period of time for a particular timeframe (the default is the daily timeframe).
 
 ## How to Use
 1. Make sure MetaTrader 4 is installed and connected to your broker.  This may be different depending on your country.  In the US, I use [Oanda](https://www.oanda.com/us-en/trading/platforms/metatrader-4/) (which is also why this is written in MQL4 because they did not support MT5).
