@@ -13,6 +13,6 @@ Please note, as with all market [backtesting](https://www.investopedia.com/terms
 
 * **Simple ROI Low Setting** - this picks the indicator for each symbol based on the best ROI from the *start_eval* to *end_eval* period, splitting ties of ROI by the lowest setting of the indicator.  The thought is the best performing indicators over a month or year evaluation period might perform well over a *start_sim* to *end_sim* simulation period and lower settings may give a faster signal on indicators over a high setting that may miss trends.
 * **Simple ROI High Setting** - same as above except higher settings may give a signal on indicators that has less noise and less false signals than a low setting.
-* **No Lose Streak Average Win1 > 80% High Setting"** - this shows how to use some filter logic to create a strategy.  It assumes the longest lose streak = 0 and the average win percentage of win_1_atr is greater than 80% sorting ties by setting high (see above).
+* **No Lose Streak Average Win1 > 80% High Setting** - this shows how to use some filter logic to create a strategy.  It assumes the longest lose streak = 0 and the average win percentage of win_1_atr is greater than 80% sorting ties by setting high (see above).
 * **Winningest Signals Low Setting** - this uses complicated logic to first find the winningest indicator (regardless of setting) for a symbol, then sort by the best ROI from the evaluation period, splitting ties by lowest setting
 * **Winningest Signals High Setting** - same as above but by highest setting
